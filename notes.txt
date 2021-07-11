@@ -1,0 +1,6 @@
+There can only be one H1 tag because of CEO
+
+BEM
+-> Block -> Wrapper -> .gallery{}
+-> Element -> img, buttons, texts -> gallery__img{}
+-> Modifier -> colors, sizes -> gallery__img--round{}
