@@ -147,34 +147,160 @@ main {
   background-repeat: no-repeat;
 }
 
-.table__column--right {
-  padding: 10px;
+.main-currency-table,
+.main-commission-table {
+  width: 50%;
+  min-width: 235px;
+  max-width: 500px;
+  max-height: 360px;
+  margin: 0 auto;
+  margin-top: 48px;
   font-family: "Inter", sans-serif;
+}
+
+.main-currency-table .currency-table__title,
+.main-commission-table .commission-table__title {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: var(--bitcoin-orange);
+}
+
+.main-commission-table .commission-table__title {
+  color: var(--secondary-blue);
+}
+
+.currency-table__container,
+.commission-table__container {
+  min-width: 230px;
+  max-width: 300px;
+  /* height: 250px; */
+  margin: 0 auto;
+}
+
+.currency-table__container table,
+.commission-table__container table {
+  /* width: 100%;  */
+  /* height: 100%; */
+  background-color: var(--just-white);
+  border-radius: 8px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.currency-table__container td {
+  width: 50%;
+}
+
+.currency-table__container .table__column--right,
+.commission-table__container .table__column--right {
+  padding: 12px 0px 12px 20px;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  font-size: 400;
-  color: #757575;
+  font-weight: 400;
+  color: hsl(0, 0%, 46%);
+  border-bottom: 1px solid var(--off-white);
+  border-left: 1px solid var(--off-white);
 }
 
-.table__column--left {
-  padding: 10px;
-  font-family: "Inter", sans-serif;
+.commission-table__container .table__column--right {
+  padding-right: 20px;
+}
+
+.currency-table__container .table__column--left,
+.commission-table__container .table__column--left {
+  padding: 12px 20px 12px 20px;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  font-size: 500;
-
+  font-weight: 500;
   color: #b5b0ac;
+  border-bottom: 1px solid var(--off-white);
 }
 
-.table__icon--down {
+.table__icon--down,
+.table__icon--up {
   display: inline-block;
-  width: 11px;
-  height: 6px;
+  width: 17px;
+  height: 10px;
   background-image: url("./assets/icons/trending-down.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-left: 10px;
+  margin-left: 20px;
   align-self: center;
   margin-bottom: 1px;
+}
+
+.table__icon--up {
+  background-image: url("./assets/icons/trending-up.svg");
+}
+
+.currency-table__date,
+.commission-table__date {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 16px;
+  padding: 8px;
+  background-color: var(--soft-orange);
+  border-radius: 8px;
+}
+
+.commission-table__date {
+  background-color: var(--soft-blue);
+}
+
+.currency-table__date p,
+.commission-table__date p {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: var(--warm-black);
+  text-align: center;
+}
+
+.main-product-details {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--warm-black);
+}
+
+/* Element with position absolute finds closest parent with position relative to determine and delimit their position*/
+
+.product-details__batata-logo {
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  background-image: url("./assets/icons/batata.svg");
+  /* Position minus width/heigth of element */
+  top: calc(0% - 12.5px);
+  left: calc(50% - 20px);
+}
+
+.product-details__title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 64px;
+  text-align: center;
+}
+
+.product-details__title h2 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  color: var(--just-white);
+}
+
+.product-details__title p {
+  margin-bottom: 32px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
 }
